@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_grey"
+	tools:context=".SettingsActivity">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="35dp"
+			android:orientation="vertical">
+
+			<CheckBox
+				android:id="@+id/hide"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:text="Ukryj zakończone zadania"
+				android:textColor="@color/white"
+				android:textSize="25dp" />
+
+			<TextView
+				android:id="@+id/estimatedTime"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:text="Czas"
+				android:textColor="@color/white"
+				android:textSize="25dp" />
+
+			<Button
+				android:id="@+id/timePick3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Czas przed powiadomieniem"
+				android:textSize="19dp" />
+
+			<Button
+				android:id="@+id/deleteButton2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:backgroundTint="@color/red"
+				android:text="Usuń wszystkie wydarzenia" />
+
+
+			<EditText
+				android:id="@+id/categoryInput"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:ems="10"
+				android:inputType="textPersonName"
+				android:textColor="@color/white" />
+
+			<Button
+				android:id="@+id/addCategoryBTN"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Dodaj kategorię"
+				android:textSize="19dp" />
+
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/categoriesRec"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

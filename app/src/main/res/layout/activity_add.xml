@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background_grey"
+	tools:context=".AddActivity">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="50dp"
+		tools:layout_editor_absoluteX="1dp"
+		tools:layout_editor_absoluteY="189dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<Switch
+				android:id="@+id/notifications"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:layout_marginBottom="30dp"
+				android:text="Powiadomienia"
+				android:textColor="@color/white"
+				android:textSize="22dp" />
+
+			<Spinner
+				android:id="@+id/category"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:background="@android:drawable/btn_dropdown"
+				android:spinnerMode="dropdown" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Tytuł"
+					android:textColor="@color/white"
+					android:textSize="22dp" />
+
+				<EditText
+					android:id="@+id/titleInput"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="textPersonName"
+					android:textColor="@color/white" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Opis"
+					android:textColor="@color/white"
+					android:textSize="22dp" />
+
+				<EditText
+					android:id="@+id/descriptionInput"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:gravity="start|top"
+					android:inputType="textMultiLine"
+					android:textColor="@color/white" />
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:text="Czas wykonania"
+				android:textColor="@color/white"
+				android:textSize="22dp" />
+
+			<TextView
+				android:id="@+id/executionTime"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:text="data"
+				android:textColor="@color/white"
+				android:textSize="22dp" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:orientation="horizontal">
+
+
+				<Button
+					android:id="@+id/datePick"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="5dp"
+					android:layout_weight="1"
+					android:text="Dzień" />
+
+				<Button
+					android:id="@+id/timePick"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="5dp"
+					android:layout_weight="1"
+					android:text="Godzina" />
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/fileName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="35dp"
+				android:text="Nazwa pliku"
+				android:textColor="@color/white"
+				android:textSize="16dp"
+				android:visibility="gone" />
+
+			<Button
+				android:id="@+id/openAttachment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:text="Otwórz załącznik"
+				android:visibility="gone" />
+
+			<Button
+				android:id="@+id/deleteAttachment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:layout_marginBottom="20dp"
+				android:backgroundTint="@color/red"
+				android:text="Usuń załącznik"
+				android:visibility="gone" />
+
+			<Button
+				android:id="@+id/addAttachment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginRight="35dp"
+				android:layout_marginBottom="15dp"
+				android:text="Dodaj załącznik" />
+
+			<Button
+				android:id="@+id/saveButton"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="35dp"
+				android:layout_marginRight="35dp"
+				android:text="Zatwierdź" />
+
+
+		</LinearLayout>
+	</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
